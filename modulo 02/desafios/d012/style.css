@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* Define a codificação de caracteres como UTF-8, essencial para garantir que caracteres especiais sejam renderizados corretamente */
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+/* Importa duas fontes personalizadas do Google Fonts: 'Passion One' e 'Sriracha' */
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Sriracha', sans-serif;
+}
+/* Define variáveis CSS (custom properties) para facilitar o uso e a manutenção das fontes no código */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+/* Reseta o margin e padding para todos os elementos, garantindo consistência, e define o tamanho base da fonte como 1em (tamanho padrão) */
+
+html, body{
+    background-color: darkgray;
+    min-height: 100vh;
+    font-family: var(--fonte1);
+}
+/* Define o fundo da página como cinza escuro, assegura que o conteúdo ocupe pelo menos 100% da altura da tela, e utiliza a fonte definida em --fonte1 para o texto padrão */
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* Define o estilo do cabeçalho, com fundo preto, texto branco e centralizado */
+
+header > h1{
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;
+}
+/* Aplica estilos ao título <h1> no cabeçalho: espaçamento superior de 50px, letras em pequenas maiúsculas, a fonte personalizada 'Passion One', e o tamanho da fonte relativo à largura da janela (10% da largura da tela) */
+
+header > p {
+    padding-bottom: 50px;
+}
+/* Adiciona um espaçamento inferior de 50px ao parágrafo dentro do cabeçalho */
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+/* Estiliza os links: texto branco, sem sublinhado e com negrito */
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+/* Quando o mouse passar sobre um link no cabeçalho ou rodapé, será sublinhado */
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 4.5vw;
+}
+/* Estiliza as seções: espaçamento superior e inferior de 10% da altura da tela, espaçamento entre linhas de 2em, padding à esquerda de 30px, usa a fonte 'Sriracha' e tamanho de fonte relativo à largura da tela (4.5%) */
+
+section > p{
+    padding-bottom: 2em;
+}
+/* Adiciona um espaçamento inferior de 2em aos parágrafos dentro de seções */
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+/* Estilo para seções com a classe 'normal': fundo branco e texto preto */
+
+section.imagem{
+    background-color: rgba(12, 12, 12, 0.801);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.39);
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Estilo para seções com a classe 'imagem': fundo semi-transparente (12, 12, 12) com 80% de opacidade, cor do texto branca, sombra interna para dar profundidade, o fundo cobre toda a área da seção, e o fundo fica fixo durante o scroll */
+
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    display: inline-block;
+    text-shadow: 1px 1px 0px black;
+}
+/* Estilo para parágrafos dentro de seções 'imagem': fundo semitransparente (50% opacidade), padding de 5px, o texto se ajusta ao conteúdo com 'inline-block', e uma sombra preta de 1px para destacar o texto */
+
+section#img01{
+    background-image: url('background001.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+/* Seção com id 'img01': define uma imagem de fundo ('background001.jpg') com posicionamento no centro à direita e que cobre toda a área da seção */
+
+section#img02{
+    background-image: url('background002.jpg');
+    background-size: cover;
+}
+/* Seção com id 'img02': define uma imagem de fundo ('background002.jpg') que cobre toda a área da seção */
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Estilo do rodapé: fundo preto, texto branco, texto centralizado e padding de 10px */

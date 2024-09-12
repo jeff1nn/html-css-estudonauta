@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        /* Estilizando o elemento com id "container" */
+        #container{
+            /* Define uma imagem de fundo para o container */
+            background-image: url('target001.png');
+            /* Ajusta a imagem de fundo para ocupar 100% da largura e altura do container */
+            background-size: 100% 100%;
+
+            /* Torna o container um elemento posicionado relativamente */
+            position: relative;
+            /* Define a altura do container para 96% da altura da janela de visualização (viewport) */
+            height: 96vh;
+            /* Adiciona um preenchimento de 10px ao redor do conteúdo interno */
+            padding: 10px;
+            /* Define uma cor de fundo roxa para o container */
+            background-color: purple;
+        }
+
+        /* Estilizando o elemento com id "conteudo" */
+        #conteudo{
+            /* Define uma imagem de fundo para o conteúdo */
+            background-image: url('target001.png');
+            /* Ajusta a imagem de fundo para ocupar 100% da largura e altura do conteúdo */
+            background-size: 100% 100%;
+
+            /* Torna o conteúdo um elemento posicionado absolutamente */
+            position: absolute;
+            /* Define a altura do conteúdo para 200px */
+            height: 200px;
+            /* Define a largura do conteúdo para 400px */
+            width: 400px;
+            /* Define uma cor de fundo verde-amarelada para o conteúdo */
+            background-color: yellowgreen;
+
+            /* Centraliza horizontalmente o conteúdo dentro do container */
+            left: 50%;
+            /* Centraliza verticalmente o conteúdo dentro do container */
+            top: 50%;
+
+            /* Usa transformações para garantir que o conteúdo fique centralizado 
+            no meio do container, ajustando pela metade de sua largura e altura */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Seção principal que envolve o conteúdo centralizado -->
+    <section id="container">
+        <!-- Artigo que será o conteúdo centralizado dentro da seção -->
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
+
+<!--Estrutura HTML:
+
+A estrutura básica do HTML começa com a declaração <!DOCTYPE html>, seguida pela tag <html> que envolve todo o conteúdo da página.
+A tag <head> contém informações meta e links de estilos, e a tag <title> define o título da página.
+O conteúdo visível é colocado dentro da tag <body>.
+Cabeçalho (<head>):
+
+A tag <meta charset="UTF-8"> define a codificação de caracteres, garantindo que caracteres especiais sejam exibidos corretamente.
+A tag <meta name="viewport" content="width=device-width, initial-scale=1.0"> faz com que a página seja responsiva, ajustando-se à largura da tela do dispositivo.
+A tag <style> define os estilos CSS usados na página.
+CSS:
+
+#container é o elemento pai, que envolve o conteúdo. Ele é posicionado relativamente, o que significa que ele pode ser usado como referência para posicionar elementos filhos (como #conteudo).
+O #container tem uma imagem de fundo, cor de fundo roxa, e ocupa 96% da altura da janela de visualização. Isso é útil para garantir que ele quase preencha a tela, mas ainda permite um pequeno espaço em cima e embaixo.
+#conteudo é o elemento que você deseja centralizar dentro de #container. Ele é posicionado absolutamente, o que permite que ele seja colocado em qualquer lugar dentro de #container, com base na posição definida (left: 50% e top: 50%).
+O truque para centralizar #conteudo é o uso da propriedade transform: translate(-50%, -50%);, que ajusta sua posição pela metade de sua própria largura e altura.
+Corpo (<body>):
+
+A tag <section id="container"> é o contêiner principal que ocupa quase toda a tela, com uma cor de fundo roxa.
+Dentro dela, a tag <article id="conteudo"> é o bloco de conteúdo que aparece centralizado no meio do contêiner, com uma cor de fundo verde-amarelada e uma imagem de fundo. -->
