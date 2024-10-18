@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        /* Define a fonte usada no corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        /* Define a largura da tabela */
+        table {
+            width: 500px;
+        }
+    
+        /* Define o estilo das células da tabela (td e th) */
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            position: relative;
+        }
+    
+        /* Define o estilo da legenda da tabela */
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(128, 128, 128, 0.445); /* Cor de fundo com transparência */
+        }
+    
+        /* Define o estilo do cabeçalho (thead) e dos cabeçalhos das colunas (th) */
+        thead, th {
+            background-color: rgba(0, 0, 0, 0.521); /* Fundo preto semitransparente */
+            color: white; /* Texto branco */
+        }
+    
+        /* Define o estilo do rodapé (tfoot) */
+        tfoot {
+            background-color: gray; /* Fundo cinza */
+            color: white; /* Texto branco */
+        }
+    
+        /* Estilo específico para o cabeçalho das colunas para que ele fique fixo ao rolar a página */
+        thead > tr > th {
+            position: sticky;
+            top: -1px; /* Mantém o cabeçalho fixo quando a página rola */
+            background-color: rgba(26, 25, 25, 0.89); /* Fundo preto com transparência */
+        }
+    
+        /* Alinha o conteúdo das células com a classe "num" à direita */
+        td.num {
+            text-align: right;
+        }
+    
+        /* Define uma cor de fundo diferente para linhas ímpares no corpo da tabela (zebra striping) */
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <h1>Uso de tabelas grandes</h1>
+        <!-- Comentário explicando a anatomia de uma tabela grande -->
+        <!--
+        Anatomia para tabelas grandes
+        TABLE
+            THEAD   - Cabeçalho da tabela
+                TR, TD, TH   - Linhas, células e cabeçalhos de coluna
+            TBODY   - Corpo da tabela
+                TR, TD, TH   - Linhas e células
+            TFOOT   - Rodapé da tabela
+                TR, TD, TH   - Linhas e células no rodapé
+        -->
+    
+        <table>
+            <!-- Legenda da tabela com título -->
+            <caption>
+                População das Unidades Federativas
+            </caption>
+    
+            <!-- Cabeçalho da tabela -->
+            <thead>
+                <tr>
+                    <!-- Define o cabeçalho das colunas "Estado" e "População" -->
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 50px;">População</th>
+                </tr>
+            </thead>
+    
+            <!-- Corpo da tabela com as linhas de dados -->
+            <tbody>
+                <!-- Cada linha representa um estado com sua respectiva população -->
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">45 973 190</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21 322 692</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17 219 679</td>
+                </tr>
+                <!-- As linhas continuam para cada estado... -->
+                <!-- As populações estão formatadas com a classe "num" para alinhamento à direita -->
+            </tbody>
+    
+            <!-- Rodapé da tabela com o total de habitantes -->
+            <tfoot>
+                <tr>
+                    <!-- O rodapé contém a célula "Total de Habitantes" e o total formatado em negrito -->
+                    <th scope="row">Total de Habitantes</th>
+                    <td class="num"><strong>212 583 720</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+    Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+    Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+    Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+    Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+        Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+        Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+        Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+        Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+            Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+            Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+            Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+            Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+                Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+                Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+                Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+                Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+                    Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+                    Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+                    Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+                    Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+                        Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+                        Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+                        Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+                        Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum velit itaque, assumenda accusamus nisi error enim. Quis, labore, aut sequi ad necessitatibus optio reiciendis architecto aliquid dignissimos beatae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat, maxime optio eum quae inventore consectetur dolores veritatis, ipsa ad fugiat reiciendis nostrum laboriosam corporis recusandae, iste beatae mollitia sapiente.
+                            Eaque ipsa quidem ipsam impedit quia saepe totam corrupti, consequuntur, ducimus at unde, quae odit vitae cum architecto facilis maiores voluptates ad. Culpa totam iure nisi consequuntur saepe quam nemo.
+                            Suscipit quaerat iusto ducimus quidem! Eius numquam magnam consequuntur esse tenetur voluptas ullam in incidunt ex alias, cum deserunt, libero molestias praesentium ipsam sint? Ad ipsa magni minima cupiditate! Temporibus.
+                            Nemo voluptatibus eum et! Pariatur voluptatibus, inventore amet ratione ipsam quisquam odio velit cumque fuga corporis optio assumenda minima, incidunt atque. Sapiente nam neque maxime odio molestiae consequatur nostrum quo.
+                            Cumque tenetur, velit repellat aliquam vitae omnis tempora consectetur, modi laudantium, animi deserunt ullam accusantium ex commodi ipsum obcaecati reprehenderit quisquam repellendus. Dicta temporibus ipsam non delectus perferendis porro eligendi.</p>
+</body>
+</html>

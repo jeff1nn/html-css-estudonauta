@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabela</title>
+    <style>
+        body{
+            /* Define a fonte usada no corpo da página como Arial, Helvetica ou outra fonte sans-serif */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            /* Define a largura da tabela como 500px */
+            width: 500px;
+            
+            /* Remove os espaços entre as bordas das células da tabela, para uma aparência contínua */
+            border-collapse: collapse;
+        }
+        
+        caption{
+            /* Define o tamanho da fonte da legenda da tabela como 1.3em, um pouco maior que o padrão */
+            font-size: 1.3em;
+            
+            /* Torna o texto da legenda em negrito */
+            font-weight: bolder;
+            
+            /* Adiciona um preenchimento de 8px ao redor da legenda */
+            padding: 8px;
+            
+            /* Alinha o texto da legenda no centro */
+            text-align: center;
+        }
+        th, td{
+            /* Adiciona uma borda preta de 1px sólida às células (tanto os cabeçalhos quanto os dados) */
+            border: 1px solid black;
+        }
+        col.cnome{
+            /* Define a cor de fundo da coluna "Nome" como chartreuse (um verde brilhante) */
+            background-color: chartreuse;
+        }
+        col.cgrupo{
+            /* Define a cor de fundo das colunas agrupadas (Sexo e Idade) como vermelho */
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabela</h1>
+<table>
+    <!-- Define um grupo de colunas com estilos específicos -->
+    <colgroup>
+        <!-- A primeira coluna (Nome) terá a classe "cnome" e será estilizada com fundo verde -->
+        <col class="cnome">
+        
+        <!-- As próximas duas colunas (Sexo e Idade) terão a classe "cgrupo" e fundo vermelho -->
+        <col class="cgrupo" span="2"> 
+        
+        <!-- A última coluna (Profissão) não tem estilo personalizado no CSS -->
+        <col class="cprof">
+    </colgroup>
+    
+    <!-- Legenda (caption) da tabela, centralizada e destacada -->
+    <caption>Cadastro</caption>
+
+    <!-- Cabeçalho da tabela, que define as colunas: Nome, Sexo, Idade, Profissão -->
+    <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Profissão</th>
+    </tr>
+
+    <!-- Linhas com dados dos cadastros: nome, sexo, idade e profissão -->
+    <tr>
+        <td>Ana</td>
+        <td>F</td>
+        <td>25</td>
+        <td>Jornalista</td>
+    </tr>
+    <tr>
+        <td>Cláudio</td>
+        <td>H</td>
+        <td>28</td>
+        <td>Programador</td>
+    </tr>
+    <tr class="destaque">
+        <td>Gustavo</td>
+        <td>H</td>
+        <td>19</td>
+        <td>Vendedor</td>
+    </tr>
+    <tr>
+        <td>Maria</td>
+        <td>F</td>
+        <td>39</td>
+        <td>Médica</td>
+    </tr>
+    <tr>
+        <td>Otávio</td>
+        <td>H</td>
+        <td>22</td>
+        <td>Nutricionista</td>
+    </tr>
+    <tr>
+        <td>Hélio</td>
+        <td>H</td>
+        <td>19</td>
+        <td>Vendedor</td>
+    </tr>
+</table>
+</body>
+</html>
